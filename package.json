@@ -1,0 +1,19 @@
+{
+  "name": "jadwal-sholat-api",
+  "version": "1.0.0",
+  "main": "script.js",
+  "dependencies": {
+    "tailwindcss": "^3.1.6"
+  },
+  "devDependencies": {
+    "webpack": "^5.77.0",
+    "webpack-cli": "^5.0.1"
+  },
+  "scripts": {
+    "build": "webpack",
+    "dev": "npx tailwindcss -i ./src/input.css -o ./public/style.css --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

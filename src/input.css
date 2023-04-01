@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.hamburger-line{
+     @apply bg-white w-8 h-1 rounded;
+}
+.navbar-fixed{
+     @apply fixed z-[9999] bg-opacity-80 top-0 transition duration-500 ;
+     backdrop-filter:blur(2px)
+}
+
+.tombol > div:nth-Child(1){
+     @apply rotate-45;
+}
+.tombol > div:nth-Child(2){
+     @apply scale-0
+}
+.tombol > div:nth-Child(3){
+     @apply -rotate-45;
+}
+
+.transition-waktu {
+     @apply transition duration-300;
+}
