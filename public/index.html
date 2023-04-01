@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>jadwalSholat</title>
+     <link rel="stylesheet" href="./style.css">
+     <style>
+          @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300&family=Nunito:wght@400;600&family=Open+Sans&family=Poppins&family=Roboto:wght@500&display=swap');
+          *{
+               margin: 0;
+               padding: 0;
+               box-sizing: border-box;
+          }
+     </style>
+</head>
+<!-- body -->
+<body class="overflow-x-hidden" id="home">
+     <!-- membuat navigasi -->
+     <header class ="w-screen p-8 bg-indigo-300 flex items-center justify-around  transition duration-500">
+          <!-- logo -->
+          <section class="text-2xl font-semibold text-white">jadwalSholat</section>
+          <!-- navigasi -->
+          <nav>
+               <ul class="hidden absolute flex-col items-center mt-12 p-5 w-screen h-max left-0 bg-indigo-300 navigasi lg:bg-transparent lg:flex-row lg:relative lg:flex lg:justify-around lg:w-max lg:space-x-10 lg:p-0 lg:mt-0" >
+                    <li class="p-1"><a href="#home" class="text-white text-xl lg:text-sm hover:text-slate-300">Beranda</a></li>
+                    <li class="p-1"><a href="#jadwalSholat" class="text-white text-xl lg:text-sm hover:text-slate-300">Jadwal Sholat</a></li>
+                    <li class="p-1"><a href="#author" class="text-white text-xl lg:text-smhover:text-slate-300">About</a></li>
+               </ul>
+               <!-- membuat hamburger menu -->
+               <section class="w-max relative flex flex-col space-y-1.5 hamburger-menu cursor-pointer lg:hidden">
+                    <div class="hamburger-line  origin-top-left  transition-waktu"></div>
+                    <div class="hamburger-line transition-waktu"></div>
+                    <div class="hamburger-line origin-bottom-left  transition-waktu"></div>
+               </section>
+          </nav>
+     </header>
+     <!-- main -->
+     <main class="mx-10 md:mx-20 md:text-1xl lg:mx-32 xl:mx-72 2xl:mx-92 font-['Poppins']  space-y-8">
+          <h1 class="text-5xl font-semibold capitalize my-8">Sholat adalah bagian dari <span class="text-indigo-300">rukun islam! </span></h1> 
+          <article class="w-full space-y-6">
+               <p class="text-[1.3rem]">Sholat adalah rukun islam yang kelima. ibadah ini sangat penting dari ibadah-ibadah lainnya. sebelum  melaksanakan sholat harus keadaan bersih. bersuci dapat dilakukan dengan berwudhu, hal ini tentunya memiliki tahap-tahap untuk menyelesaikan wudhu.</p>
+               <p class="text-[1.3rem]">Sholat  fardhu hukumnya wajib di laksanakan bagi pemeluk agama islam, sholat fardhu jika di tinggalkan akan berdosa. sholat merupakan bentuk beribadah kepada Allah SWT. sholat fardhu terdapat 5 waktu di antaranya Shubuh, zhuhur, Ashar, Magrib, dan Isya. </p>
+          </article>
+          <article class="w-full ">
+               <p class="my-2 text-[1.3rem]">Pada lima waktu pelaksanaan sholat fardhu terdapat ketentuan waktu yang berbeda pula. di website ini munkin dapat membantu anda mencari ketentuan waktu dalam melaksanakan sholat fardhu. ketentuan yang dibuat disini dapat di jadikan sebagai jadwal sholat.
+               <blockquote class="my-10 font-semibold italic  p-5 font-serif border-l-8 border-l-indigo-300  text-[1.3rem]">" Kebenaran itu hanya milik allah manusia hanya ikhtiar "</blockquote> 
+               </p>
+          </article>
+          <article>
+               <p class="text-[1.3rem]">Untuk menggunakan aplikasi ini cukup  isi daerah di search. jika menemukan nama kota lalu di "click". setelah itu pada table terdapat perubahan.</p>
+               <!-- membuat waktu -->
+               <section class="w-full flex justify-center  flex-col my-5 items-center " id="jadwalSholat"> 
+                    <div class="lg:w-9/12 w-full flex flex-col h-16 justify-between items-start sm:flex-row my-5">
+                         <!-- memebuat jam -->
+                         <section class="waktu flex text-2xl  ">
+                              <span class="jam">00</span>
+                              <span>:</span>
+                              <span class="menit">00</span>
+                              <span>:</span>
+                              <span class="detik">00</span>
+                         </section>
+                         <!-- membuat tanggal -->
+                         <section class="container_tanggal text-1xl">
+                              <span class="tanggal capitalize"></span>
+                         </section>
+                    </div>
+                    <!-- membuat fitur search -->
+                    <div class="flex w-full justify-center">
+                         <input type="text" class="cariKota w-full p-3 pr-[2.5em] py-2 bg shadow-md rounded-2xl border text-sm outline-none focus:ring-2  focus:ring-indigo-300 lg:w-9/12 " placeholder="cari kota..."/> 
+                          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 -translate-x-8 translate-y-2 stroke-slate-400  " fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                           <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                         </svg> 
+                    </div>
+                    <ul class="list-group  flex flex-col"></ul>
+                    <!-- box jadwal -->
+                    <div class="w-full my-5 flex justify-center flex-col lg:w-9/12  xl:w-[80%]">
+                         <section class=" flex justify-center items-center border-t-8 py-3  "> 
+                              <span class="namaKota text-xl font-serif font-medium text-slate-800"><svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                   <path stroke-linecap="round" stroke-linejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                 </svg>Lokasi : Binjai</span>
+                         </section>
+                         <ul class="max-w-1xl p-5 rounded-xl shadow-xl lg:mx-auto lg:w-9/12  xl:w-9/12 border" >
+                              <li class="flex justify-between p-3 border-b-2">Subuh  <span class="subuh"></span></li>
+                              <li class="flex justify-between p-3 border-b-2">Imsak  <span class="imsak"></span></li>
+                              <li class="flex justify-between p-3 border-b-2">Terbit <span class ="terbit"></span></li>
+                              <li class="flex justify-between p-3 border-b-2">Dzuhur <span class="dzuhur"></span></li>
+                              <li class="flex justify-between p-3 border-b-2">Ashar <span class="ashar"></span></li>
+                              <li class="flex justify-between p-3 border-b-2">Maghrib <span class="maghrib"></span></li>
+                              <li class="flex justify-between p-3 border-b-2">Isya <span class="isya"></span></li>
+                         </ul>
+                    </div>
+               </section>
+          </article>
+          <!-- about app -->
+          <article class="mt-10 ">
+               <h2 class="text-4xl font-bold my-5 ">About</h2>
+               <p class="align-middle text-[1.3rem]">Aplikasi yang saya buat dengan API bersifat terbuka yang berasal dari situs <strong>https://fathimah.docs.apiary.io/#</strong>. saya mengambil data yang sudah mereka sediakan. mungkin sumber tersebut dapat membantu kita dalam melaksanakan ibadah sholat.</p>
+               <p class="align-middle text-[1.3rem]">website ini saya juga belajar dari chanel youtube <strong><a href="https://www.youtube.com/@kikiagustin">@kikiagustin</a></strong>. berkat beliau saya bisa buat website seperti ini, terimah kasih banyak mas <strong><a href="https://www.youtube.com/@kikiagustin">@kikiagustin</a></strong> semoga dengan berbagi ilmu yang bermanfaat ini menjadikan amal kebaikan.</p>
+               <p class="my-5 text-[1.3rem]">Dengan aplikasi ini pengguna dapat menggunakan fitur pergantian daerah. tentu setiap daerah pasti berbeda-beda. jika ada permasalah aplikasi yang terkait pengguna dapat menghubungi contact media sosial yang tertera.</p>
+          </section>
+     </article>
+     <!-- profile author -->
+     <article class="w-full flex justify-center items-center" id="author">
+          <div class="card border w-full flex flex-col justify-center items-center shadow-xl p-5  my-8 rounded-xl md:flex-row md:px-5 lg:w-9/12 xl:px-20">
+               <img src="../src/asset/profil.png" alt="author" class="w-40 h-38 rounded-full object-fill">
+               <section class="md:flex md:flex-col md:justify-evenly md:items-center ">
+                    <blockquote class="my-3.5  italic p-5 mx-5 text-slate-700 text-center ">"Hallo saya Fadli, saya senang membuat website pada bidang frontend. semoga dengan sesuatu bermanfaat yang saya buat. dapat mengantarkan kesurganya Allah SWT. "</blockquote>
+               </section>
+          </div>git
+     </article>
+     </main>
+     <!-- footer -->
+     <footer class="bg-indigo-300 w-full py-4 flex justify-center">
+          <span class="text-white text-center mx-auto font-bold">jadwalSholat-&copy;2022</span> 
+     </footer>
+     <script src="../script.js"></script>
+</body>
+</html>
